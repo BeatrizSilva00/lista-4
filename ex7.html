@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Média da Turma</title>
+</head>
+<body>
+    <script>
+        let notas = [];
+        let soma = 0;
+
+        for (let i = 0; i < 5; i++) {
+            let nota = parseFloat(prompt(`Nota do aluno ${i+1}:`));
+            notas.push(nota);
+            soma += nota;
+        }
+
+        let media = soma / notas.length;
+        let acimaDaMedia = 0;
+
+        for (let i = 0; i < notas.length; i++) {
+            if (notas[i] > media) {
+                acimaDaMedia++;
+            }
+        }
+
+        alert(`Média Geral: ${media.toFixed(2)}\nAlunos acima da média: ${acimaDaMedia}`);
+    </script>
+    <h1>Média da Turma</h1>
+    <a href="index.html"><button>Voltar</button></a>
+</body>
+</html>

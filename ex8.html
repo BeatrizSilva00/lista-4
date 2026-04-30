@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Gerador de Múltiplos</title>
+</head>
+<body>
+    <script>
+        let base = parseInt(prompt("Digite o número base:"));
+        let qtd = parseInt(prompt("Quantos múltiplos deseja ver?"));
+        let multiplos = [];
+
+        for (let i = 1; i <= qtd; i++) {
+            multiplos.push(base * i);
+        }
+
+        alert("Vetor gerado: [" + multiplos.join(", ") + "]");
+    </script>
+    <h1>Gerador de Múltiplos</h1>
+    <a href="index.html"><button>Voltar</button></a>
+</body>
+</html>
